@@ -3,7 +3,6 @@ import React from "react";
 
 export function Graph({ coinId, setselected, coins }) {
   const coin = coins.filter((coin) => coin.symbol.toLocaleLowerCase() == coinId.toLocaleLowerCase())[0];
-  console.log(coin);
   const limpiar = () => {
     setselected("none");
   };
@@ -26,23 +25,18 @@ export function Graph({ coinId, setselected, coins }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#330000",
+    backgroundColor: "#141414",
     flex: 1,
     width: "100%",
-    alignItems: "center",
   },
   ancho: {
     flex: 1,
   },
   scroll: {
-    backgroundColor: "#003300",
-    width: "100%",
-    margin: 20,
+    backgroundColor: "#242424",
     borderWidth: 2,
     borderColor: "#FFFFFF",
     width: "100%",
-    padding: 10,
-    flex: 1,
   },
   title: {
     fontSize: 20,
@@ -60,5 +54,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
+    padding: 10,
+    borderWidth: 2,
+    borderColor: "#FFFFFF",
   },
 });

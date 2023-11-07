@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, StatusBar, FlatList, TextInput } from "react-native";
 import { Graph } from "./components/graph";
+import { AtomInputDefault } from "./components/mycomp";
 
 import CoinItem from "./components/CoinItem";
 
@@ -23,7 +24,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="#141414" />
-
+      <AtomInputDefault></AtomInputDefault>
       <View style={styles.header}>
         <Text style={styles.title}>CryptoMarket</Text>
         <TextInput
@@ -46,7 +47,7 @@ const App = () => {
           refreshing={refreshing}
           onRefresh={async () => {
             setRefreshing(true);
-            await loadData();
+            loadData();
             setRefreshing(false);
           }}
         />
